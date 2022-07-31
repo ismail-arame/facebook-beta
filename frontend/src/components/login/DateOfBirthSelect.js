@@ -48,7 +48,9 @@ export default function DateOfBirthSelect({
       {dateError && (
         <div
           className={
-            !view3 ? "input_error" : "input_error input_error_select_large"
+            !view3
+              ? "input_error error_animation_register_left_side"
+              : "input_error input_error_select_view3 error_animation_register_left_side"
           }
         >
           <div

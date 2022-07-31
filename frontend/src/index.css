@@ -53,6 +53,11 @@ a {
   gap: 6px;
   cursor: pointer;
 }
+
+.blue_btn:hover {
+  background: #166fe5;
+  border-color: #365899;
+}
 /*----- Buttons -----*/
 
 .blur {
@@ -63,4 +68,14 @@ a {
   left: 0;
   background: rgb(255, 255, 255, 0.768);
   z-index: 99;
+  animation: fadein 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

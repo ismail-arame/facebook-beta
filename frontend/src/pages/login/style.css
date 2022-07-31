@@ -66,6 +66,12 @@
   font-weight: 600 !important;
   font-size: 17px !important;
   margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.open_signup:hover {
+  background: #36a420;
+  border-color: #36a420;
 }
 
 .sign_extra {
@@ -81,6 +87,23 @@
 /*------- Login -------*/
 
 /*------- Register -------*/
+
+/* register Modal animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    right: 100%;
+  }
+  75% {
+    opacity: 0.4;
+    right: 46%;
+  }
+  to {
+    opacity: 1;
+    right: 50%;
+  }
+}
+
 .register {
   position: absolute;
   top: 50%;
@@ -96,13 +119,50 @@
   color: var(--color-primary);
 }
 
+.register_fadein_animation {
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
 .register_header {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--bg-third);
+  /* border-bottom: solid 1px var(--bg-third); */
+}
+
+/* register header line animation */
+@keyframes lineFadeIn {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.register_header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--bg-third);
+  width: 100%;
+}
+.register_header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #00fa9a;
+  animation: lineFadeIn 0.7s ease;
+  animation-delay: 0.3s;
+  width: 100%;
 }
 
 .register_header i {
@@ -111,22 +171,59 @@
   cursor: pointer;
 }
 
+/* register header Fade In animation  */
+@keyframes registerHeaderFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .register_header span:first-of-type {
   font-weight: 700;
   font-size: 32px;
+  animation: registerHeaderFadeIn 0.3s cubic-bezier(0.75, 1.1, 0.34, 0.98);
 }
 
 .register_header span:last-of-type {
   font-size: 15px;
   color: var(--color-secondary);
+  animation: registerHeaderFadeIn 0.3s cubic-bezier(0.75, 1.1, 0.34, 0.98);
 }
+
+/* form Animation Fade in from bottom to Top  */
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .register_form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: formFadeIn 1s cubic-bezier(0.75, 1.1, 0.34, 0.98);
 }
-
 .reg_line {
   display: flex;
   flex-direction: column;
@@ -259,12 +356,12 @@
   top: 70px;
 }
 
-.input_error_select_large {
+.input_error_select_view3 {
   left: -98%;
   top: 8px !important;
 }
 
-.input_error_label_large {
+.input_error_label_view3 {
   right: -98%;
   top: 8px !important;
 }

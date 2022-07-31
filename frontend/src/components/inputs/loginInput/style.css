@@ -59,6 +59,63 @@
 
 .input_error_desktop_login {
   right: 103% !important;
+  top: 2px !important;
+  transition: all 0.2s ease;
+}
+
+@keyframes slideFromRightToLeft {
+  0% {
+    transform: translateX(500px) scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideFromLeftToRight {
+  0% {
+    transform: translateX(-500px) scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* input error animation on the login route, desktop (min-width: 850px) view */
+.error_animation_desktop_login {
+  animation: slideFromLeftToRight 0.24s ease-in-out;
+}
+/* input error animation on the login route, mobile (min-width: 850px) view */
+.error_animation_mobile_login {
+  animation: slideFromLeftToRight 0.24s ease-in-out;
+}
+
+/* input error animation on the register route, viewe (min-width: 539px) translates from left to right */
+.error_animation_register_left_side {
+  animation: slideFromLeftToRight 0.24s ease-in-out;
+}
+
+/* input error animation on the register route, view3 (min-width: 539px) translates from right to left */
+.error_animation_register_right_side {
+  animation: slideFromRightToLeft 0.24s ease-in-out;
 }
 
 .input_error_desktop_left_side {

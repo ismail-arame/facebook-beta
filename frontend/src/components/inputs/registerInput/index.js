@@ -26,7 +26,7 @@ export default function RegisterInput({
   const test1 = view3 && field.name === "first_name";
   const test2 = view3 && field.name === "last_name";
 
-  // console.log("view3 : ", view3);
+  console.log("view1 : ", view1);
   return (
     <div className="input_wrap register_input_wrap">
       <input
@@ -40,14 +40,15 @@ export default function RegisterInput({
       {meta.touched && meta.error && (
         <div
           className={
-            view3 && field.name !== "password"
-              ? "input_error input_error_desktop input_error_desktop_left_side"
-              : view3 && field.name === "password"
-              ? "input_error input_error_desktop input_error_desktop_right_side"
-              : "input_error"
+            view3 && left
+              ? "input_error input_error_desktop input_error_desktop_left_side error_animation_register_left_side"
+              : view3 && right
+              ? "input_error input_error_desktop input_error_desktop_right_side error_animation_register_right_side"
+              : view1 && field.name === "last_name"
+              ? "input_error error_animation_register_right_side"
+              : "input_error error_animation_register_left_side"
           }
           style={{
-            transform: "translateY(2px)",
             left: `${test1 ? "-107%" : test2 ? "107%" : ""}`,
           }}
         >

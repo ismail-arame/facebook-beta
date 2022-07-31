@@ -16,7 +16,8 @@ import axios from "axios";
 
 import { login } from "../../reducers/user/userActions";
 
-export default function RegisterForm({ setVisible }) {
+export default function RegisterForm({ visible, setVisible }) {
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   const userInfos = {
     first_name: "",
     last_name: "",
@@ -123,8 +124,12 @@ export default function RegisterForm({ setVisible }) {
   };
   return (
     <div className="blur">
-      <div className="register">
-        <div className="register_header">
+      <div
+        className={`${
+          visible ? "register register_fadein_animation " : "register"
+        }`}
+      >
+        <div className={"register_header"}>
           <i className="exit_icon" onClick={() => setVisible(false)}></i>
           <span>Sign Up</span>
           <span>it's quick and easy</span>
@@ -219,6 +224,7 @@ export default function RegisterForm({ setVisible }) {
                   days={days}
                   months={months}
                   years={years}
+                  left
                 />
               </div>
               <div className="reg_col">
@@ -228,6 +234,7 @@ export default function RegisterForm({ setVisible }) {
                 <GenderSelect
                   handleRegisterChange={handleRegisterChange}
                   genderError={genderError}
+                  right
                 />
               </div>
               <div className="reg_infos">

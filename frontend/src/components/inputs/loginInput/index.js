@@ -18,10 +18,9 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
         <div
           className={
             desktopView
-              ? "input_error input_error_desktop input_error_desktop_login"
-              : "input_error"
+              ? "input_error input_error_desktop input_error_desktop_login error_animation_desktop_login"
+              : "input_error error_animation_mobile_login"
           }
-          style={{ transform: "translateY(3px)" }}
         >
           {meta.touched && meta.error && <ErrorMessage name={field.name} />}
           {meta.touched && meta.error && (
@@ -43,10 +42,9 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
         <div
           className={
             desktopView
-              ? "input_error input_error_desktop input_error_desktop_login"
-              : "input_error"
+              ? "input_error input_error_desktop input_error_desktop_login error_animation_desktop_login"
+              : "input_error error_animation_mobile_login"
           }
-          style={{ transform: "translateY(2px)" }}
         >
           {meta.touched && meta.error && <ErrorMessage name={field.name} />}
           {meta.touched && meta.error && (
