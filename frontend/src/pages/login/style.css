@@ -165,11 +165,26 @@
   width: 100%;
 }
 
-.register_header i {
+.circleX {
   position: absolute;
   right: 0;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-5px);
+  transition: all 0.2s;
 }
+
+.circleX:hover {
+  background: #f5f6f7;
+}
+
+/* .register_header i { */
+/* } */
 
 /* register header Fade In animation  */
 @keyframes registerHeaderFadeIn {

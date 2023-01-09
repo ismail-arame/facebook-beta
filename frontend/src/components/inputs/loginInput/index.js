@@ -10,6 +10,10 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
   const desktopView = useMediaQuery({
     query: "(min-width: 850px)",
   });
+  const view1200 = useMediaQuery({
+    query: "(max-width: 1200px)",
+  });
+  // const
 
   console.log("desktopView : ", desktopView);
   return (
@@ -17,7 +21,9 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
       {meta.touched && meta.error && !bottom && (
         <div
           className={
-            desktopView
+            desktopView && view1200 && field.name === "password"
+              ? "input_error input_error_desktop password_error"
+              : desktopView
               ? "input_error input_error_desktop input_error_desktop_login error_animation_desktop_login"
               : "input_error error_animation_mobile_login"
           }
@@ -41,7 +47,9 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
       {meta.touched && meta.error && bottom && (
         <div
           className={
-            desktopView
+            desktopView && view1200 && field.name === "confirmPassword"
+              ? "input_error confirmPassword_error"
+              : desktopView
               ? "input_error input_error_desktop input_error_desktop_login error_animation_desktop_login"
               : "input_error error_animation_mobile_login"
           }

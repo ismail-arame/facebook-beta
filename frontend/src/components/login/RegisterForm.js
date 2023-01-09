@@ -95,18 +95,22 @@ export default function RegisterForm({ visible, setVisible }) {
   //Sign up Submit function
   const registerSubmit = async () => {
     try {
-      console.log(process.env.REACT_APP_BACKEND_URL);
+      console.log("env frontend url : ", process.env.REACT_APP_BACKEND_URL);
       setLoading(true);
-      const { data } = await axios.post(`http://localhost:8000/register`, {
-        first_name,
-        last_name,
-        email,
-        password,
-        bYear,
-        bMonth,
-        bDay,
-        gender,
-      });
+      // `http://localhost:8000/register`
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/register`,
+        {
+          first_name,
+          last_name,
+          email,
+          password,
+          bYear,
+          bMonth,
+          bDay,
+          gender,
+        }
+      );
       setError("");
       setSuccess(data.message);
       const { message, ...rest } = data;
@@ -130,7 +134,9 @@ export default function RegisterForm({ visible, setVisible }) {
         }`}
       >
         <div className={"register_header"}>
-          <i className="exit_icon" onClick={() => setVisible(false)}></i>
+          <div className="circleX" onClick={() => setVisible(false)}>
+            <i className="exit_icon"></i>
+          </div>
           <span>Sign Up</span>
           <span>it's quick and easy</span>
         </div>

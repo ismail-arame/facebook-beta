@@ -6,31 +6,31 @@ const userSchema = new mongoose.Schema(
   {
     first_name: {
       type: String,
-      require: [true, "first name is required"],
+      required: [true, "first name is required"],
       trim: true, //trim => removes spaces
       text: true, //text => enable searching by text in mongodb
     },
     last_name: {
       type: String,
-      require: [true, "last name is required"],
+      required: [true, "last name is required"],
       trim: true,
       text: true,
     },
     username: {
       type: String,
-      require: [true, "user name is required"],
+      required: [true, "user name is required"],
       trim: true,
       text: true,
       unique: true,
     },
     email: {
       type: String,
-      require: [true, "email is required"],
+      required: [true, "email is required"],
       trim: true,
     },
     password: {
       type: String,
-      require: [true, "password is required"],
+      required: [true, "password is required"],
     },
     picture: {
       type: String,

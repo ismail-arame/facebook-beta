@@ -18,6 +18,7 @@ a {
   --bg-secondary: #f0f2f5;
   --bg-third: #e4e6eb;
   --bg-forth: #f0f2f5;
+  --bg-fifth: #f5f6f7;
   --color-primary: #050505;
   --color-secondary: #65676b;
   --divider: #ced0d4;
@@ -33,6 +34,7 @@ a {
   --shadow-1: rgba(0, 0, 0, 0.2);
   --shadow-2: rgba(0, 0, 0, 0.1);
   --shadow-3: rgba(0, 0, 0, 0.3);
+  --shadow-4: rgba(0, 0, 0, 0.16);
   --shadow-inset: rgba(255, 255, 255, 0.5);
 }
 
@@ -52,11 +54,34 @@ a {
   justify-content: center;
   gap: 6px;
   cursor: pointer;
+  transition: all 0.1s;
+}
+
+.gray_btn {
+  border: none;
+  outline: none;
+  background: var(--bg-third);
+  padding: 8.5px 12px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--dark-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 .blue_btn:hover {
   background: #166fe5;
   border-color: #365899;
+}
+.gray_btn:hover {
+  background: #dedfe1;
+  border-color: #717273;
 }
 /*----- Buttons -----*/
 
@@ -79,3 +104,60 @@ a {
     opacity: 1;
   }
 }
+
+/* -------- Hovers --------- */
+.hover1 {
+  transition: all 0.1s ease;
+}
+.hover2 {
+  transition: all 0.1s ease;
+}
+.hover3 {
+  transition: all 0.1s ease;
+}
+.hover1:hover {
+  background: var(--bg-secondary);
+}
+
+.hover2:hover {
+  background: var(--bg-third);
+}
+
+.hover3:hover {
+  background: #d4d6da3a;
+}
+/* -------- Hovers --------- */
+
+.card {
+  width: 500px;
+  height: 500px;
+  background: red;
+}
+
+/* -------- Scrollbar --------- */
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #aeaeafa1;
+  border-radius: 5px;
+}
+
+/* -------- Scrollbar --------- */
+
+/* -------- Circles --------- */
+.small_circle {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 11px;
+  background: var(--bg-third);
+  cursor: pointer;
+}
+/* -------- Circles --------- */

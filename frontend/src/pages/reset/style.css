@@ -1,0 +1,374 @@
+.reset {
+  background: var(--bg-secondary);
+  height: 100vh;
+  color: var(--color-primary);
+}
+
+.reset_header {
+  background: var(--bg-primary);
+  box-shadow: 1px 8px 15px -7px var(--shadow-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 50px;
+}
+.reset_header img {
+  width: 160px;
+}
+
+.right_reset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right_reset img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transform: translateY(3px);
+}
+
+.reset_wrap {
+  height: 67vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reset_form {
+  position: relative;
+  background: var(--bg-primary);
+  box-shadow: 0 1px 2px var(--shadow-1);
+  border-radius: 10px;
+  width: 500px;
+  height: 280px;
+}
+
+.change_password_form {
+  /* height: 340px;
+  padding-bottom: 0 !important; */
+  height: fit-content;
+  padding-bottom: 80px !important;
+}
+
+.reset_form_header {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 24px;
+  border-bottom: 1px solid var(--bg-third);
+}
+
+.reset_form_text {
+  padding: 17px;
+  font-size: 17px;
+}
+
+.reset_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* margin-left: 15px; */
+  border-bottom: 1px solid var(--bg-third);
+}
+
+.reset_form form .input_wrap {
+  width: 90%;
+  margin-left: 17px;
+}
+
+.reset_form_btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.reset_form_btns button,
+.reset_form_btns .gray_btn {
+  width: 90px;
+  font-size: 15px;
+}
+
+.search_account {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+
+.error_text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.success_text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.error_text_send_email {
+  justify-content: left !important;
+  padding-left: 22px;
+}
+
+.search_account_loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.send_email_loading {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-left: 22px;
+}
+.verify_code_loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.change_password_loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.code_verfication_reset_form {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+/**************** (SendEmail.js) ******************/
+.reset_grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  font-size: 15px;
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--bg-third);
+  padding-bottom: 10px;
+}
+
+.reset_grid .reset_form_text {
+  color: var(--color-primary);
+  /* padding: 10px 10px 10px 0; */
+  padding-left: 5px;
+}
+
+.reset_left {
+  padding: 15px;
+}
+.reset_grid label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.reset_left input {
+  width: 20px;
+  height: 20px;
+}
+
+.label_col {
+  display: flex;
+  flex-direction: column;
+}
+.label_col span:last-child {
+  font-size: 14px;
+}
+.reset_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset_right img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.reset_right span {
+  font-size: 14px;
+}
+
+.reset_right .searched_email {
+  color: var(--color-primary);
+  font-size: 15px;
+}
+
+.dynamic_height {
+  height: 310px;
+}
+
+/**************** (SendEmail.js) ******************/
+
+/**************** (CodeVerification.js) ******************/
+
+.code_verfication_reset_form form {
+  /* margin-bottom: 20px; */
+  padding-bottom: 15px;
+}
+
+/**************** (CodeVerification.js) ******************/
+
+/* confirmPassword input error */
+.confirmPassword_error {
+  transform: translateY(55px) !important;
+}
+
+.confirmPassword_error .error_arrow_left {
+  transform: rotate(180deg) translateY(76px);
+  /* transform: ; */
+}
+/* confirmPassword input error */
+
+/* Password input error */
+.password_error {
+  transform: translateY(-16px);
+}
+.password_error .error_arrow_left {
+  transform: translateY(8px);
+}
+/* Password input error */
+
+/**************** Media Queries ******************/
+
+@media (max-width: 550px) {
+  .reset_form {
+    width: 400px;
+  }
+  .reset_form_header {
+    font-size: 22px;
+  }
+  .reset_form_text {
+    font-size: 15px;
+  }
+  .reset_form_btns button,
+  .reset_form_btns .gray_btn {
+    font-size: 14px;
+  }
+
+  /* SendEmail.js */
+  .label_col {
+    font-size: 14.5px;
+  }
+  .label_col span:last-child {
+    font-size: 13.5px;
+  }
+  .reset_right span {
+    font-size: 13.5px;
+  }
+
+  .reset_right .searched_email {
+    font-size: 14.5px;
+  }
+  .reset_grid .reset_form_btns {
+    bottom: 5px;
+  }
+  /* SendEmail.js */
+
+  /* CodeVerification.js */
+
+  .code_verfication_reset_form form {
+    /* margin-bottom: 20px; */
+    padding-bottom: 20px;
+  }
+
+  /* CodeVerification.js */
+}
+
+@media (max-width: 450px) {
+  /* SendEmail.js */
+  .reset_grid {
+    grid-template-columns: 1fr;
+  }
+  .dynamic_height {
+    height: 400px;
+  }
+  .reset_grid .reset_form_btns {
+    bottom: 3px;
+  }
+  /* SendEmail.js */
+}
+
+@media (max-width: 400px) {
+  .reset_form {
+    width: 350px;
+  }
+  .reset_form_header {
+    font-size: 20px;
+  }
+  .reset_form_text {
+    font-size: 14px;
+  }
+  .reset_form form .input_wrap input {
+    font-size: 14px;
+  }
+
+  /* SendEmail.js */
+  .reset_grid .reset_form_btns {
+    bottom: 5px;
+  }
+  /* SendEmail.js */
+
+  /* CodeVerification.js */
+  .code_verfication_reset_form .reset_form_btns {
+    bottom: 3px;
+    /* CodeVerification.js */
+  }
+}
+
+/************** search account form ***************/
+@media (min-width: 850px) and (max-width: 1200px) {
+  .change_password_form {
+    height: fit-content;
+    padding-bottom: 80px !important;
+  }
+
+  .reset_form .input_error {
+    top: -60px !important;
+    left: 0;
+    width: 100%;
+  }
+
+  /* overwriting the left arrow to be top arrow */
+  .reset_form .error_arrow_left {
+    position: absolute;
+    border-top: solid 10px #b94b49;
+    border-right: solid 10px transparent;
+    border-left: solid 10px transparent;
+    left: 10px !important;
+    top: 56px;
+    width: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* .search_account {
+    height: fit-content;
+    padding-bottom: 80px;
+  } */
+  .reset_form {
+    height: fit-content;
+    padding-bottom: 80px;
+  }
+  .change_password_form {
+    padding-bottom: 80px !important;
+  }
+}
+/************** search account form ***************/
+
+/**************** Media Queries (SearchAccount) ******************/

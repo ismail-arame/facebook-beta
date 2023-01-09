@@ -9,6 +9,12 @@ export function userReducer(state = INITIAL_STATE, action) {
     case userActionTypes.LOGIN:
       return action.payload;
 
+    case userActionTypes.LOGOUT:
+      return null;
+
+    case userActionTypes.VERIFY:
+      return { ...state, verified: action.payload };
+
     default:
       return state;
   }
