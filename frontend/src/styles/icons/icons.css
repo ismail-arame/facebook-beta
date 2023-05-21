@@ -295,6 +295,15 @@
   background-repeat: no-repeat;
   display: inline-block;
 }
+.unpin_icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/7Tkw_T00Qay.png");
+  background-position: 0px -189px;
+  background-size: auto;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 .save_icon {
   background-image: url("../../../public/icons/icons1.png");
   background-position: 0px -63px;
@@ -332,6 +341,15 @@
   display: inline-block;
   -webkit-filter: invert(40%);
 }
+.turnOnNotifications_icon {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/_B7YpXOJHpM.png");
+  background-position: 0px -105px;
+  background-size: auto;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 .turnOffNotifications_icon {
   background-image: url("../../../public/icons/icons3.png");
   background-position: 0px -138px;
@@ -341,7 +359,7 @@
   background-repeat: no-repeat;
   display: inline-block;
 }
-.delete_icon {
+.turnOffTranslations_icon {
   background-image: url("../../../public/icons/icons1.png");
   background-position: 0px -399px;
   background-size: auto;
@@ -406,6 +424,28 @@
   background-repeat: no-repeat;
   display: inline-block;
   filter: invert(40%);
+}
+.comment_count_icon {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/Yffinjush8w.png?_nc_eui2=AeFi-SoEEc6dbhcP5mzjtZTQ9hz8zj_dUGH2HPzOP91QYS-MXg3kRJv0CfAugCh0dNNMNtZaZ0AgraOvVjEuCzjd);
+  background-position: 0px -428px;
+  background-size: auto;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)
+    hue-rotate(174deg) brightness(94%) contrast(86%);
+}
+.share_count_icon {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/Yffinjush8w.png?_nc_eui2=AeFi-SoEEc6dbhcP5mzjtZTQ9hz8zj_dUGH2HPzOP91QYS-MXg3kRJv0CfAugCh0dNNMNtZaZ0AgraOvVjEuCzjd);
+  background-position: 0px -615px;
+  background-size: auto;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)
+    hue-rotate(174deg) brightness(94%) contrast(86%);
 }
 .share_icon {
   background-image: url("../../../public/icons/icons5.png");

@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const fileUpload = require("express-fileupload");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -16,6 +17,13 @@ app.use(
   cors({
     origin: "http://localhost:3000",
     useSuccessStatus: 200,
+  })
+);
+
+//tempFiles will help us store all the files we're going to send on the request se can go to the request.files and get the files that are there and do all the tests on them
+app.use(
+  fileUpload({
+    useTempFiles: true,
   })
 );
 

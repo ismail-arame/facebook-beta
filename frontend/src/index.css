@@ -5,6 +5,9 @@
 }
 body {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  /* light MODE */
+  background: var(--bg-secondary);
+  /* dark MODE */
 }
 html {
   overflow-y: scroll;
@@ -19,6 +22,7 @@ a {
   --bg-third: #e4e6eb;
   --bg-forth: #f0f2f5;
   --bg-fifth: #f5f6f7;
+  --bg-sixth: #ced0d4;
   --color-primary: #050505;
   --color-secondary: #65676b;
   --divider: #ced0d4;
@@ -85,6 +89,7 @@ a {
 }
 /*----- Buttons -----*/
 
+/* light mode */
 .blur {
   position: fixed;
   top: 0;
@@ -94,6 +99,14 @@ a {
   background: rgb(255, 255, 255, 0.768);
   z-index: 99;
   animation: fadein 0.3s ease-in-out;
+}
+
+.blur_createpostpopup {
+  z-index: 99;
+  /* animation: fadein 0.1s ease; */
+  filter: blur(1px);
+  filter: invert(5%);
+  opacity: 90%;
 }
 
 @keyframes fadein {
@@ -115,6 +128,9 @@ a {
 .hover3 {
   transition: all 0.1s ease;
 }
+.hover4 {
+  transition: all 0.1s ease;
+}
 .hover1:hover {
   background: var(--bg-secondary);
 }
@@ -125,6 +141,10 @@ a {
 
 .hover3:hover {
   background: #d4d6da3a;
+}
+
+.hover4:hover {
+  background: var(--bg-sixth);
 }
 /* -------- Hovers --------- */
 

@@ -3,7 +3,7 @@ import "./style.css";
 import { Feeling, LiveVideo, Photo } from "../../svg";
 import { useMediaQuery } from "react-responsive";
 
-export default function CreatePost({ user }) {
+export default function CreatePost({ user, setCreatePostVisible }) {
   const query340px = useMediaQuery({
     query: "(max-width: 340px)",
   });
@@ -11,7 +11,13 @@ export default function CreatePost({ user }) {
     <div className="createPost">
       <div className="createPost_header">
         <img src={user?.picture} alt="" />
-        <div className="open_post hover2">
+        <div
+          className="open_post hover2"
+          onClick={() => {
+            //open the POST POPUP when  clicking on what's on your mind
+            setCreatePostVisible(true);
+          }}
+        >
           What's on your mind, {user?.first_name}
         </div>
       </div>

@@ -1,6 +1,7 @@
 .home {
-  min-height: 100vh;
-  background: var(--bg-secondary);
+  /* min-height: 100vh; */
+  /* Home Background is set in the index.css */
+  /* background: var(--bg-secondary); */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -17,21 +18,24 @@
 /* we have to add the POSTS to this 2 break points max-width:1366px and min-width:1367px  */
 @media (max-width: 1366px) {
   .createPost,
-  .send_verification {
+  .send_verification,
+  .post {
     max-width: 560px;
   }
 }
 /* we have to add the POSTS to this 2 break points max-width:1366px and min-width:1367px  */
 @media (min-width: 1367px) {
   .createPost,
-  .send_verification {
+  .send_verification,
+  .post {
     max-width: 680px;
   }
 }
 
 @media (max-width: 1150px) {
   .createPost,
-  .send_verification {
+  .send_verification,
+  .post {
     max-width: 680px;
   }
   .left_home .left_link span,
